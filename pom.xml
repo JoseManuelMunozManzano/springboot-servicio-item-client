@@ -40,11 +40,6 @@
 			<artifactId>spring-cloud-starter-openfeign</artifactId>
 		</dependency>
 
-		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-netflix-ribbon</artifactId>
-		</dependency>
-
 		<!-- Cada vez que queramos un cliente, un microservicio que se registre en el servidor de Eureka,
      	tiene que tener la dependencia Eureka Discovery -->
 		<dependency>
