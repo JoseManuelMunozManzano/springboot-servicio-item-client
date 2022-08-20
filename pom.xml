@@ -47,6 +47,23 @@
 			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
 		</dependency>
 
+<!--		Se va a usar Hystrix para manejar fallos en las comunicaciones entre microservicios, como tolerancia a fallos,-->
+<!--		latencia y time-out.-->
+<!--		Por ejemplo, cuando alcanza cierto límite de fallos en una instancia en particular, deja de realizar-->
+<!--		solicitudes a esa instancia de ese microservicio, y además permite tener un camino alternativo.-->
+<!--		Por ejemplo, si tenemos una sola instancia de microservicio y falla, podemos llamar a una función o callback que-->
+<!--		se encarga de reemplazar esta instancia, y ese callback podría llamar, por ejemplo, a otra instancia que esté-->
+<!--		disponible, implementando una lógica por defecto programable en caso de error.-->
+<!--		Así se pueden evitar errores en cascada que pueden ocurrir en el ecosistema de nuestra aplicación de microservicios.-->
+<!--		-->
+<!--		To-do esto por debajo implementa el patrón de diseño Cortocircuito (Circuit Breakers)-->
+<!--		Hystrix es compatible solo con SpringBoot 2.2 y 2.3. A partir de la versión 2.4 se usa la librería Resilience4j.-->
+<!--		Resilience4j se ve más adelante.-->
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
+		</dependency>
+
 	</dependencies>
 
 	<build>
